@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="betriebsdirektor601.gcbabble"
+      android:versionName="1.0.5" android:versionCode="6">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="false">
+        
+       <service android:name=".GCBabbleService">
+       </service>
+       
+       <service android:name=".GCBabbleServiceParkplatz">
+       </service>
+        
+        <activity android:name=".GCBabbleIntentMain"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".GCBabbleIntentGeo"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="geo"/>
+            </intent-filter>
+        </activity>
+		
+		<activity android:name=".GCBabbleIntentRadar"
+			android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.google.android.radar.SHOW_RADAR" />
+				<category android:name="android.intent.category.DEFAULT" />
+                
+                
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".GCBabbleActivity"
+                  android:label="@string/app_name">
+            
+        </activity>
+        
+        <activity android:name=".GCBabbleParkplatzSpeichern"
+                  android:label="@string/app_name">
+            
+        </activity>
+        
+        
+        
+        
+
+    </application>
+    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+	
+</manifest>
